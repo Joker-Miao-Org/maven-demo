@@ -47,6 +47,3 @@ Web IDE 为你提供业界领先的在线研发体验，变量定义及依赖支
 
 进一步了解更多？请参看 [帮助手册](https://thoughts.aliyun.com/sharespace/5e8c37eb546fd9001aee8242/docs/5e8c37e6546fd9001aee81fa)。
 
-TEEST
-
-Test--1
