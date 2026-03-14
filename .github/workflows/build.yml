@@ -10,10 +10,20 @@ name: Build with java
 on:
   push:
     branches: [ "develop","master","develop001" ]
-#  pull_request:
-#    branches: [ "master" ,"develop001"]
+  pull_request_target: 
+    branches: [ "master" ,"develop001"]
 
 jobs:
+  echoRepoName:
+    name: show me the repo name
+    runs-on: ubuntu-latest
+    steps:
+      - name: show me the repo name
+        run: |
+          echo repo: ${{github.repository}}
+          echo ref_name: ${{github.ref_name}}
+          echo action_repo: ${{github.action_repository}}
+          echo repo_owner: ${{github.repository_owner}}
   build-00:
     name: init job
     runs-on: ubuntu-22.04
