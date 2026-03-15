@@ -8,8 +8,8 @@
 name: Build with java
 
 on:
-  push:
-    branches: [ "develop","master","develop001" ]
+#  push:
+#    branches: [ "develop","master","develop001" ]
   pull_request_target: 
     branches: [ "master" ,"develop001"]
 
@@ -24,6 +24,11 @@ jobs:
           echo ref_name: ${{github.ref_name}}
           echo action_repo: ${{github.action_repository}}
           echo repo_owner: ${{github.repository_owner}}
+      - name: show me the ref and sha
+        run: |
+          echo github ref: ${{github.ref}}
+          echo github sha: ${{github.sha}}
+          echo ${{github.workflow_ref}}/${{github.head_ref}}/${{github.base_ref}}
   build-00:
     name: init job
     runs-on: ubuntu-22.04
